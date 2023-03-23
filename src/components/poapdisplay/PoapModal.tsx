@@ -43,7 +43,7 @@ const PoapModal = ({}: Props) => {
               key={`${modalInfo.imgKey} ${modalInfo.key}`}
               src={modalInfo.img}
               alt={modalInfo.imgKey}
-              sizes={"8rem, 8rem"}
+              sizes={"8rem 8rem"}
             />
           </motion.div>
           <p>{modalInfo.date}</p>
