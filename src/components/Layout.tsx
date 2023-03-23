@@ -62,6 +62,8 @@ Layout.defaultProps = {
   keywords:
     "Front-end development, Web3 applications, Argentina, Portfolio, Blog posts, Responsive design, Nicolás Biondini, JavaScript, React, Front-end frameworks, Web3 advancements, Latest web development trends",
   url: "https://nicolasbiondini.com",
+  imageUrl:
+    "https://res.cloudinary.com/blogfilmania/image/upload/v1679586705/Captura_de_pantalla_2023-03-23_a_la_s_12.50.42_iblebz.png",
 };
 
 export default Layout;
