@@ -30,7 +30,7 @@ function Poap({ poap }: Props) {
         fill
         className="object-cover border-none "
         alt={poap.event.fancy_id}
-        sizes={"6rem, 6rem"}
+        sizes={"6rem 6rem"}
       />
     </motion.div>
   );
