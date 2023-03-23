@@ -433,6 +433,6 @@ export const getStaticProps = async () => {
       posts: posts,
       poaps,
     },
-    //revalidate: 60,
+    revalidate: 60,
   };
 };
