@@ -51,7 +51,9 @@ const Markdown = ({
   return (
     <ReactMarkdown
       className={`${
-        modal && "max-h-[150px] md:max-h-[200px] z-10 overflow-y-auto"
+        modal
+          ? "max-h-[150px] md:max-h-[200px] z-10 overflow-y-auto"
+          : "flex flex-col gap-10 "
       }`}
       components={MarkdownComponents}
     >
