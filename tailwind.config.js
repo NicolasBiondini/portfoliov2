@@ -15,8 +15,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Assistant", ...defaultTheme.fontFamily.sans],
-        mono: ["Roboto Mono"],
+        sans: ["var(--assistant-font)", ...defaultTheme.fontFamily.sans],
+        mono: ["var(--roboto_mono-font)"],
       },
     },
     colors: {

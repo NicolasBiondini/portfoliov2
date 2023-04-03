@@ -48,7 +48,9 @@ function Layout({
         <link rel="canonical" href="https://nicolasbiondini.com" />
         <title>{title}</title>
       </Head>
-      <motion.section className=" flex flex-col align-middle justify-center items-center w-full transition ease-out duration-500 overflow-x-hidden overflow-y-hidden  dark:text-mainWithe ">
+      <motion.section
+        className={` flex flex-col align-middle justify-center items-center w-full transition ease-out duration-500 overflow-x-hidden overflow-y-hidden  dark:text-mainWithe `}
+      >
         {children}
       </motion.section>
     </>
