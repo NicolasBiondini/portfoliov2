@@ -52,7 +52,7 @@ function ProjectCard({ rotate, finalKey, index, project }: Props) {
                 ? { opacity: 1, y: 80, rotate: 15, x: 180 }
                 : { opacity: 1, y: 0, rotate: -10 }
             }
-            className={`hidden lg:flex absolute -bottom-24 right-52 xl:-bottom-16 ${
+            className={`hidden lg:flex absolute -bottom-28 right-52 xl:-bottom-24 z-0 ${
               rotate && "left-0 xl:-bottom-20"
             }`}
           >
@@ -126,7 +126,7 @@ function ProjectCard({ rotate, finalKey, index, project }: Props) {
         <Link
           href={`/projects/${project.slug}`}
           className={
-            "font-mono  text-dark dark:text-mainWithe hover:text-orange-600 dark:hover:text-orange-600 transition-all"
+            "font-mono z-10  text-dark dark:text-mainWithe hover:text-orange-600 dark:hover:text-orange-600 transition-all"
           }
           scroll={false}
         >
