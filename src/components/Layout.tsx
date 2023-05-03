@@ -62,7 +62,7 @@ Layout.defaultProps = {
   description:
     "Nicolás Biondini is a talented front-end developer from Argentina, with a passion for web3 applications. Explore his personal website to discover a portfolio of innovative projects and insightful blog posts on the latest web development trends and technologies. With a focus on responsive design, cross-platform compatibility, and a user-centered approach, Nicolás' work showcases his expertise in the latest front-end development tools and frameworks, including JavaScript, React, and more. Whether you're looking to collaborate on a project or stay up-to-date on the latest web3 advancements, Nicolás Biondini's personal website is the perfect resource for you",
   keywords:
-    "Front-end development, Web3 applications, Argentina, Portfolio, Blog posts, Responsive design, Nicolás Biondini, JavaScript, React, Front-end frameworks, Web3 advancements, Latest web development trends",
+    "Nicolás Biondini, Front-end development, Web3 applications, Argentina, Portfolio, Blog posts, Responsive design, JavaScript, React",
   url: "https://nicolasbiondini.com",
   imageUrl:
     "https://res.cloudinary.com/blogfilmania/image/upload/v1679586705/Captura_de_pantalla_2023-03-23_a_la_s_12.50.42_iblebz.png",

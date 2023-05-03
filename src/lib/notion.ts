@@ -162,18 +162,20 @@ const getProjectMetaData = (project: any, card: boolean) => {
     };
   }
 
-  return {
-    id: project.id,
-    title: project.properties.name.title[0].plain_text,
-    image: project.properties?.image.url || "",
-    github: project.properties?.github.url || "",
-    demo: project.properties?.demo.url || "",
-    frontend: getTags(project.properties.frontend.multi_select),
-    backend: getTags(project.properties.backend.multi_select),
-    deploy: getTags(project.properties.deploy.multi_select),
-    slug: project.properties.slug.rich_text[0].plain_text,
-    description: project.properties.description.rich_text[0].plain_text,
-  };
+  if (project !== undefined) {
+    return {
+      id: project.id,
+      title: project.properties.name.title[0].plain_text,
+      image: project.properties?.image.url || "",
+      github: project.properties?.github.url || "",
+      demo: project.properties?.demo.url || "",
+      frontend: getTags(project.properties.frontend.multi_select),
+      backend: getTags(project.properties.backend.multi_select),
+      deploy: getTags(project.properties.deploy.multi_select),
+      slug: project.properties.slug.rich_text[0].plain_text,
+      description: project.properties.description.rich_text[0].plain_text,
+    };
+  }
 };
 
 // Function to fetch and get all the PROJECTS
@@ -208,12 +210,22 @@ export const getSingleProject = async (slug: string) => {
   const response = await notion.databases.query({
     database_id: process.env.NOTION_DATABASE_ID_PROJECTS || "",
     filter: {
-      property: "slug",
-      formula: {
-        string: {
-          equals: slug,
+      and: [
+        {
+          property: "active",
+          checkbox: {
+            equals: true,
+          },
         },
-      },
+        {
+          property: "slug",
+          formula: {
+            string: {
+              equals: slug,
+            },
+          },
+        },
+      ],
     },
   });
 
@@ -226,4 +238,36 @@ export const getSingleProject = async (slug: string) => {
     metadata,
     markdown: mdString,
   };
+};
+
+//Function to get the POST IS by an slug
+export const fetchSingleProjectBySlug = async (slug: string) => {
+  const post = await notion.databases.query({
+    database_id: process.env.NOTION_DATABASE_ID_PROJECTS || "",
+    filter: {
+      and: [
+        {
+          property: "active",
+          checkbox: {
+            equals: true,
+          },
+        },
+        {
+          property: "slug",
+          formula: {
+            string: {
+              equals: slug,
+            },
+          },
+        },
+      ],
+    },
+  });
+
+  const allPosts = post.results;
+
+  if (allPosts.length > 0) {
+    return allPosts[0].id;
+  }
+  return undefined;
 };

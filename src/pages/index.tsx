@@ -37,6 +37,7 @@ export default function Home({ projects, posts, poaps }: Props) {
         "TypeScript",
         "JavaScript",
         "Solidity",
+        "Rust",
         "Python",
         "SQL",
         "C",

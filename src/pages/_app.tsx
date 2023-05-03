@@ -1,4 +1,3 @@
-import Layout from "@/components/Layout";
 import NavBar from "@/components/navbar/NavBar";
 import "@/styles/globals.css";
 import { AnimatePresence } from "framer-motion";
