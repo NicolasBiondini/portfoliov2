@@ -44,7 +44,20 @@ const Markdown = ({
           </div>
         );
       }
+
       return <p>{paragraph.children}</p>;
+    },
+    h2: (h2: { level: number; node: any; children: string[] }) => {
+      return <h2 className="font-semibold text-2xl">{h2.children[0]}</h2>;
+    },
+    code: (code: { className: string; node: any; children: string[] }) => {
+      return (
+        <div className="lg:w-[80%] m-auto bg-orange-400 flex flex-col p-8 justify-center items-start rounded-lg overflow-auto ">
+          <code className="text-lessBlack font-medium ">
+            {code.children[0]}
+          </code>
+        </div>
+      );
     },
   };
 
