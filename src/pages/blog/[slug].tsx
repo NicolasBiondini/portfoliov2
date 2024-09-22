@@ -96,7 +96,7 @@ const Post = ({ post }: { post: any }) => {
           <div className="flex w-[80%] h-[1px] sm:w-[450px] md:w-[650px] lg:w-[753px] xl:w-[853px] bg-orange-600"></div>
           <div className="flex flex-col w-full justify-center items-center px-4 md:px-0">
             <div className=" max-w-sm sm:max-w-none sm:w-[450px] md:w-[650px] lg:w-[753px] xl:w-[853px] font-mono font-light flex flex-col gap-8 pt-4">
-              <Markdown>{post.markdown}</Markdown>
+              <Markdown>{post.markdown.parent}</Markdown>
             </div>
           </div>
         </motion.div>
@@ -107,6 +107,8 @@ const Post = ({ post }: { post: any }) => {
 
 export const getStaticProps = async ({ params }: { params: any }) => {
   const post = await getSinglePost(params?.slug);
+
+  console.log(post);
 
   return {
     props: {

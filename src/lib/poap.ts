@@ -8,7 +8,7 @@ export const getPoaps = async () => {
       },
     };
     const response = await fetch(
-      "https://api.poap.tech/actions/scan/nbiondini.eth",
+      "https://api.poap.tech/actions/scan/nbiondini.eth?size=small",
       options
     );
     const data: poap[] = await response.json();

@@ -141,7 +141,7 @@ function Project({ project }: Props) {
             <div className=" lg:w-2/3">
               <Carousel text="- ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT " />
               <div className="font-mono font-light flex flex-col gap-8 pt-4">
-                <Markdown>{project.markdown}</Markdown>
+                <Markdown>{project.markdown.parent}</Markdown>
               </div>
             </div>
           </div>
